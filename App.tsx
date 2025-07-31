@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigation from "./Navigations/BottomNavigations";
+import { AppProvider } from "./src/Context/context";
 
-const App = () => {
+export default function App() {
   return (
-    <View>
-      <Text>App Hello user</Text>
-    </View>
+    <AppProvider>
+      <NavigationContainer>
+        <MainNavigation />
+      </NavigationContainer>
+    </AppProvider>
   );
-};
-
-export default App;
-
-const styles = StyleSheet.create({});
+}
