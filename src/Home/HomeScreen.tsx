@@ -1,20 +1,19 @@
-import React, { useRef, useState } from "react";
-import {
-  ScrollView,
-  StyleSheet,
-  StatusBar,
-  FlatList,
-  View,
-  TouchableOpacity,
-} from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, StatusBar, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Today_Calendar_Add from "./Today_Calendar_Add";
 import TopBar from "./TopBar";
 import QuickButton from "./QuickButton";
 import Heading_scheduled from "./Heading_scheduled";
 import Events from "./Events";
+import Sidebar from "../../Navigations/Sidebar";
+import LogOutModal from "./LogOut";
+import { useData } from "../Context/context";
 
 export default function HomeScreen() {
+  const [drawerVisible, setDrawerVisible] = useState(false);
+  const { showLogoutModal, setShowLogoutModal } = useData();
+
   const data = [
     {
       id: 1,
@@ -83,29 +82,42 @@ export default function HomeScreen() {
     // Add more events as needed;
   ];
 
+  function Op_logout() {
+    setShowLogoutModal(false);
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        backgroundColor="#0000" // optional: sets background color (Android)
-        barStyle="dark-content" // "default", "light-content", "dark-content"
-        hidden={false}
+    <>
+      <SafeAreaView style={styles.container}>
+        <Sidebar />
+        <StatusBar
+          backgroundColor="#0000" // optional: sets background color (Android)
+          barStyle="dark-content" // "default", "light-content", "dark-content"
+          hidden={false}
+        />
+        <TopBar active={setDrawerVisible} />
+        <FlatList
+          data={data}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item }) => <Events data={item} />}
+          ListHeaderComponent={
+            <>
+              <Today_Calendar_Add />
+              <QuickButton />
+              <Heading_scheduled />
+            </>
+          }
+          showsVerticalScrollIndicator={false} // 👈 hides the scrollbar
+          contentContainerStyle={{ paddingBottom: 80 }}
+        />
+      </SafeAreaView>
+      {/* Logout Modal */}
+      <LogOutModal
+        visible={showLogoutModal}
+        onCancel={() => setShowLogoutModal(false)}
+        onConfirm={Op_logout}
       />
-      <TopBar />
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={({ item }) => <Events data={item} />}
-        ListHeaderComponent={
-          <>
-            <Today_Calendar_Add />
-            <QuickButton />
-            <Heading_scheduled />
-          </>
-        }
-        showsVerticalScrollIndicator={false} // 👈 hides the scrollbar
-        contentContainerStyle={{ paddingBottom: 80 }}
-      />
-    </SafeAreaView>
+    </>
   );
 }
 const styles = StyleSheet.create({

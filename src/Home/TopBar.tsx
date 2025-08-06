@@ -2,7 +2,15 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { BurgerIcon, CBXMEETLOGO, SearchIcon } from "../../Icons/Icons";
 
-const TopBar = () => {
+import { Dispatch, SetStateAction } from "react";
+import { useData } from "../Context/context";
+
+interface PropsForTopBar {
+  active: Dispatch<SetStateAction<boolean>>;
+}
+
+const TopBar: React.FC<PropsForTopBar> = ({ active }) => {
+  const { setToggleSidebar } = useData();
   return (
     <View style={styles.Container}>
       <View style={styles.row}>
@@ -18,7 +26,7 @@ const TopBar = () => {
           <TouchableOpacity>
             <SearchIcon size={26} color={""} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => setToggleSidebar(true)}>
             <BurgerIcon size={28} color={""} />
           </TouchableOpacity>
         </View>

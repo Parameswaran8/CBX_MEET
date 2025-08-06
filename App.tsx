@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import MainNavigation from "./Navigations/BottomNavigations";
-import { AppProvider } from "./src/Context/context";
+import { AppContextProvider, useData } from "./src/Context/context";
+import Sidebar from "./Navigations/Sidebar";
 
 export default function App() {
   return (
-    <AppProvider>
+    <AppContextProvider>
       <NavigationContainer>
         <MainNavigation />
+        <Sidebar />
       </NavigationContainer>
-    </AppProvider>
+    </AppContextProvider>
   );
 }

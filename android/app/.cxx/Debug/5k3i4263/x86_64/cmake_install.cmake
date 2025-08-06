@@ -44,9 +44,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/rngesturehandler_codegen_autolinked_build/cmake_install.cmake")
+  include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/RNMmkvSpec_autolinked_build/cmake_install.cmake")
+  include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/RNMmkvSpec_cxxmodule_autolinked_build/cmake_install.cmake")
+  include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/rnreanimated_autolinked_build/cmake_install.cmake")
   include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/safeareacontext_autolinked_build/cmake_install.cmake")
   include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/rnscreens_autolinked_build/cmake_install.cmake")
   include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/rnsvg_autolinked_build/cmake_install.cmake")
+  include("/Users/harekrishn/Desktop/Param/React_Native/CBX_MEET/android/app/.cxx/Debug/5k3i4263/x86_64/rnworklets_autolinked_build/cmake_install.cmake")
 
 endif()
 

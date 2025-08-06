@@ -914,4 +914,310 @@ export const LocationIcon: React.FC<IconProps> = ({ size, color }) => (
   </Svg>
 );
 
+export const UserIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 16 17" fill="none">
+    <Path
+      d="M1.3335 13.54C1.33341 12.7464 1.52578 11.9647 1.89412 11.2619C2.26247 10.559 2.79578 9.95597 3.44834 9.50447C4.1009 9.05297 4.85323 8.76647 5.64081 8.66955C6.4284 8.57263 7.22774 8.66817 7.9703 8.94799"
+      stroke="#040C1A"
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M1.3335 13.54C1.33341 12.7464 1.52578 11.9647 1.89412 11.2619C2.26247 10.559 2.79578 9.95597 3.44834 9.50447C4.1009 9.05297 4.85323 8.76647 5.64081 8.66955C6.4284 8.57263 7.22774 8.66817 7.9703 8.94799"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M1.3335 13.54C1.33341 12.7464 1.52578 11.9647 1.89412 11.2619C2.26247 10.559 2.79578 9.95597 3.44834 9.50447C4.1009 9.05297 4.85323 8.76647 5.64081 8.66955C6.4284 8.57263 7.22774 8.66817 7.9703 8.94799"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M13.2184 10.8568C13.4627 10.6125 13.6 10.2811 13.6 9.93561C13.6 9.59009 13.4627 9.25871 13.2184 9.01439C12.9741 8.77007 12.6427 8.63281 12.2972 8.63281C11.9517 8.63281 11.6203 8.77007 11.376 9.01439L8.91653 11.4751C8.77071 11.6208 8.66397 11.8009 8.60619 11.9988L8.09283 13.7591C8.07744 13.8119 8.07652 13.8678 8.09016 13.9211C8.1038 13.9743 8.13151 14.0229 8.17039 14.0618C8.20926 14.1007 8.25787 14.1284 8.31112 14.142C8.36438 14.1557 8.42032 14.1547 8.47309 14.1393L10.2333 13.626C10.4312 13.5682 10.6114 13.4615 10.7571 13.3156L13.2184 10.8568Z"
+      stroke="#040C1A"
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M13.2184 10.8568C13.4627 10.6125 13.6 10.2811 13.6 9.93561C13.6 9.59009 13.4627 9.25871 13.2184 9.01439C12.9741 8.77007 12.6427 8.63281 12.2972 8.63281C11.9517 8.63281 11.6203 8.77007 11.376 9.01439L8.91653 11.4751C8.77071 11.6208 8.66397 11.8009 8.60619 11.9988L8.09283 13.7591C8.07744 13.8119 8.07652 13.8678 8.09016 13.9211C8.1038 13.9743 8.13151 14.0229 8.17039 14.0618C8.20926 14.1007 8.25787 14.1284 8.31112 14.142C8.36438 14.1557 8.42032 14.1547 8.47309 14.1393L10.2333 13.626C10.4312 13.5682 10.6114 13.4615 10.7571 13.3156L13.2184 10.8568Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M13.2184 10.8568C13.4627 10.6125 13.6 10.2811 13.6 9.93561C13.6 9.59009 13.4627 9.25871 13.2184 9.01439C12.9741 8.77007 12.6427 8.63281 12.2972 8.63281C11.9517 8.63281 11.6203 8.77007 11.376 9.01439L8.91653 11.4751C8.77071 11.6208 8.66397 11.8009 8.60619 11.9988L8.09283 13.7591C8.07744 13.8119 8.07652 13.8678 8.09016 13.9211C8.1038 13.9743 8.13151 14.0229 8.17039 14.0618C8.20926 14.1007 8.25787 14.1284 8.31112 14.142C8.36438 14.1557 8.42032 14.1547 8.47309 14.1393L10.2333 13.626C10.4312 13.5682 10.6114 13.4615 10.7571 13.3156L13.2184 10.8568Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M6.23997 8.63326C7.93362 8.63326 9.3066 7.26028 9.3066 5.56663C9.3066 3.87298 7.93362 2.5 6.23997 2.5C4.54632 2.5 3.17334 3.87298 3.17334 5.56663C3.17334 7.26028 4.54632 8.63326 6.23997 8.63326Z"
+      stroke="#040C1A"
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M6.23997 8.63326C7.93362 8.63326 9.3066 7.26028 9.3066 5.56663C9.3066 3.87298 7.93362 2.5 6.23997 2.5C4.54632 2.5 3.17334 3.87298 3.17334 5.56663C3.17334 7.26028 4.54632 8.63326 6.23997 8.63326Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M6.23997 8.63326C7.93362 8.63326 9.3066 7.26028 9.3066 5.56663C9.3066 3.87298 7.93362 2.5 6.23997 2.5C4.54632 2.5 3.17334 3.87298 3.17334 5.56663C3.17334 7.26028 4.54632 8.63326 6.23997 8.63326Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.735991}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+);
+
+export const FAQIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 14 15" fill="none">
+    <G clipPath="url(#clip0_67_317)">
+      <Path
+        d="M6.99976 13.3335C10.2214 13.3335 12.833 10.7219 12.833 7.50025C12.833 4.27863 10.2214 1.66699 6.99976 1.66699C3.77814 1.66699 1.1665 4.27863 1.1665 7.50025C1.1665 10.7219 3.77814 13.3335 6.99976 13.3335Z"
+        stroke="#040C1A"
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M6.99976 13.3335C10.2214 13.3335 12.833 10.7219 12.833 7.50025C12.833 4.27863 10.2214 1.66699 6.99976 1.66699C3.77814 1.66699 1.1665 4.27863 1.1665 7.50025C1.1665 10.7219 3.77814 13.3335 6.99976 13.3335Z"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M6.99976 13.3335C10.2214 13.3335 12.833 10.7219 12.833 7.50025C12.833 4.27863 10.2214 1.66699 6.99976 1.66699C3.77814 1.66699 1.1665 4.27863 1.1665 7.50025C1.1665 10.7219 3.77814 13.3335 6.99976 13.3335Z"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M5.30225 5.75032C5.43939 5.36046 5.71008 5.03172 6.06638 4.82232C6.42267 4.61292 6.84158 4.53638 7.24891 4.60625C7.65623 4.67611 8.02569 4.88788 8.29183 5.20405C8.55798 5.52021 8.70365 5.92037 8.70303 6.33364C8.70303 7.50029 6.95306 8.08362 6.95306 8.08362"
+        stroke="#040C1A"
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M5.30225 5.75032C5.43939 5.36046 5.71008 5.03172 6.06638 4.82232C6.42267 4.61292 6.84158 4.53638 7.24891 4.60625C7.65623 4.67611 8.02569 4.88788 8.29183 5.20405C8.55798 5.52021 8.70365 5.92037 8.70303 6.33364C8.70303 7.50029 6.95306 8.08362 6.95306 8.08362"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M5.30225 5.75032C5.43939 5.36046 5.71008 5.03172 6.06638 4.82232C6.42267 4.61292 6.84158 4.53638 7.24891 4.60625C7.65623 4.67611 8.02569 4.88788 8.29183 5.20405C8.55798 5.52021 8.70365 5.92037 8.70303 6.33364C8.70303 7.50029 6.95306 8.08362 6.95306 8.08362"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M7 10.417H7.00739"
+        stroke="#040C1A"
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M7 10.417H7.00739"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M7 10.417H7.00739"
+        stroke="black"
+        strokeOpacity={0.2}
+        strokeWidth={0.679941}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="clip0_67_317">
+        <Rect
+          width={13.9998}
+          height={13.9998}
+          fill="white"
+          transform="translate(0 0.5)"
+        />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+export const LogOutIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 12 13" fill="none">
+    <Path
+      d="M4.5 11H2.5C2.23478 11 1.98043 10.8946 1.79289 10.7071C1.60536 10.5196 1.5 10.2652 1.5 10V3C1.5 2.73478 1.60536 2.48043 1.79289 2.29289C1.98043 2.10536 2.23478 2 2.5 2H4.5"
+      stroke="#040C1A"
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M4.5 11H2.5C2.23478 11 1.98043 10.8946 1.79289 10.7071C1.60536 10.5196 1.5 10.2652 1.5 10V3C1.5 2.73478 1.60536 2.48043 1.79289 2.29289C1.98043 2.10536 2.23478 2 2.5 2H4.5"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M4.5 11H2.5C2.23478 11 1.98043 10.8946 1.79289 10.7071C1.60536 10.5196 1.5 10.2652 1.5 10V3C1.5 2.73478 1.60536 2.48043 1.79289 2.29289C1.98043 2.10536 2.23478 2 2.5 2H4.5"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8 9L10.5 6.5L8 4"
+      stroke="#040C1A"
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8 9L10.5 6.5L8 4"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8 9L10.5 6.5L8 4"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M10.5 6.5H4.5"
+      stroke="#040C1A"
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M10.5 6.5H4.5"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M10.5 6.5H4.5"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.613333}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+);
+export const AlertActionIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 23 22" fill="none">
+    <Path
+      d="M11.5 14.6663H11.5083"
+      stroke="#040C1A"
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M11.5 14.6663H11.5083"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M11.5 14.6663H11.5083"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M11.5 7.33374V11.0004"
+      stroke="#040C1A"
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M11.5 7.33374V11.0004"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M11.5 7.33374V11.0004"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M14.5357 1.83374C15.0219 1.83384 15.4881 2.02707 15.8318 2.37091L20.1292 6.66824C20.473 7.01198 20.6662 7.47822 20.6663 7.96441V14.0364C20.6662 14.5226 20.473 14.9888 20.1292 15.3326L15.8318 19.6299C15.4881 19.9737 15.0219 20.167 14.5357 20.1671H8.46367C7.97748 20.167 7.51124 19.9737 7.16751 19.6299L2.87017 15.3326C2.52633 14.9888 2.33311 14.5226 2.33301 14.0364V7.96441C2.33311 7.47822 2.52633 7.01198 2.87017 6.66824L7.16751 2.37091C7.51124 2.02707 7.97748 1.83384 8.46367 1.83374H14.5357Z"
+      stroke="#040C1A"
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M14.5357 1.83374C15.0219 1.83384 15.4881 2.02707 15.8318 2.37091L20.1292 6.66824C20.473 7.01198 20.6662 7.47822 20.6663 7.96441V14.0364C20.6662 14.5226 20.473 14.9888 20.1292 15.3326L15.8318 19.6299C15.4881 19.9737 15.0219 20.167 14.5357 20.1671H8.46367C7.97748 20.167 7.51124 19.9737 7.16751 19.6299L2.87017 15.3326C2.52633 14.9888 2.33311 14.5226 2.33301 14.0364V7.96441C2.33311 7.47822 2.52633 7.01198 2.87017 6.66824L7.16751 2.37091C7.51124 2.02707 7.97748 1.83384 8.46367 1.83374H14.5357Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M14.5357 1.83374C15.0219 1.83384 15.4881 2.02707 15.8318 2.37091L20.1292 6.66824C20.473 7.01198 20.6662 7.47822 20.6663 7.96441V14.0364C20.6662 14.5226 20.473 14.9888 20.1292 15.3326L15.8318 19.6299C15.4881 19.9737 15.0219 20.167 14.5357 20.1671H8.46367C7.97748 20.167 7.51124 19.9737 7.16751 19.6299L2.87017 15.3326C2.52633 14.9888 2.33311 14.5226 2.33301 14.0364V7.96441C2.33311 7.47822 2.52633 7.01198 2.87017 6.66824L7.16751 2.37091C7.51124 2.02707 7.97748 1.83384 8.46367 1.83374H14.5357Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+);
 export const ZoomIcon: React.FC<IconProps> = ({ size, color }) => <></>;
