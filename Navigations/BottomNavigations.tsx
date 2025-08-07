@@ -47,7 +47,6 @@ export default function MainNavigation() {
   return (
     <Tab.Navigator
       screenOptions={{
-        // tabBarActiveTintColor: "#007AFF",
         tabBarInactiveTintColor: "gray",
         tabBarActiveTintColor: "#FFFFFF", // white when active
         tabBarLabelStyle: {
@@ -77,7 +76,7 @@ export default function MainNavigation() {
     >
       <Tab.Screen
         name="HOME"
-        component={HomeScreen}
+        component={HomeScreen} //HomeScreen
         options={{
           tabBarIcon: ({ color, size }) => (
             <HomeIcon size={size} color={color} />
