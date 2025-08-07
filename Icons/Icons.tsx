@@ -1,5 +1,13 @@
 import * as React from "react";
-import Svg, { Path, Rect, Circle, G, Defs, ClipPath } from "react-native-svg";
+import Svg, {
+  Path,
+  Rect,
+  Circle,
+  G,
+  Defs,
+  ClipPath,
+  Mask,
+} from "react-native-svg";
 
 interface IconProps {
   size?: number;
@@ -1215,6 +1223,174 @@ export const AlertActionIcon: React.FC<IconProps> = ({ size, color }) => (
       stroke="black"
       strokeOpacity={0.2}
       strokeWidth={1.55294}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+);
+export const QuickMeetingIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 223 164" fill="none">
+    <Mask id="path-1-inside-1_89_137" fill="white">
+      <Path d="M69.5058 41.2558C78.5955 25.3804 92.7327 13.0003 109.669 6.08485C126.605 -0.83059 145.367 -1.88422 162.971 3.09155C180.575 8.06732 196.009 18.7867 206.819 33.5447C217.629 48.3026 223.194 66.2515 222.628 84.5362C222.062 102.821 215.398 120.391 203.696 134.453C191.995 148.514 175.927 158.259 158.049 162.137C140.171 166.014 121.51 163.803 105.034 155.853C88.5582 147.904 75.2135 134.673 67.1228 118.266L69.5503 117.069C77.3739 132.935 90.2782 145.729 106.21 153.416C122.143 161.103 140.188 163.241 157.475 159.491C174.763 155.742 190.3 146.319 201.616 132.721C212.931 119.124 219.375 102.134 219.922 84.4525C220.47 66.7713 215.089 49.4149 204.635 35.1441C194.182 20.8732 179.257 10.5077 162.235 5.69612C145.212 0.884581 127.069 1.90344 110.692 8.59062C94.3149 15.2778 80.6443 27.2492 71.8547 42.6007L69.5058 41.2558Z" />
+    </Mask>
+    <Path
+      d="M69.5058 41.2558C78.5955 25.3804 92.7327 13.0003 109.669 6.08485C126.605 -0.83059 145.367 -1.88422 162.971 3.09155C180.575 8.06732 196.009 18.7867 206.819 33.5447C217.629 48.3026 223.194 66.2515 222.628 84.5362C222.062 102.821 215.398 120.391 203.696 134.453C191.995 148.514 175.927 158.259 158.049 162.137C140.171 166.014 121.51 163.803 105.034 155.853C88.5582 147.904 75.2135 134.673 67.1228 118.266L69.5503 117.069C77.3739 132.935 90.2782 145.729 106.21 153.416C122.143 161.103 140.188 163.241 157.475 159.491C174.763 155.742 190.3 146.319 201.616 132.721C212.931 119.124 219.375 102.134 219.922 84.4525C220.47 66.7713 215.089 49.4149 204.635 35.1441C194.182 20.8732 179.257 10.5077 162.235 5.69612C145.212 0.884581 127.069 1.90344 110.692 8.59062C94.3149 15.2778 80.6443 27.2492 71.8547 42.6007L69.5058 41.2558Z"
+      stroke="white"
+      strokeWidth={6}
+      mask="url(#path-1-inside-1_89_137)"
+    />
+    <Circle cx={141.333} cy={82.6666} r={13.3333} fill="white" />
+    <Path d="M150.666 92L189.999 131.333" stroke="white" strokeWidth={3} />
+    <Path d="M81.333 26.6667L97.333 42.6667" stroke="white" strokeWidth={3} />
+    <Path d="M200.334 26.6667L184.334 42.6667" stroke="white" strokeWidth={3} />
+    <Path d="M141.333 1.33325V22.6666" stroke="white" strokeWidth={3} />
+    <Path d="M141.333 142.667V164" stroke="white" strokeWidth={3} />
+    <Path d="M221.333 78.6667L200 78.6667" stroke="white" strokeWidth={3} />
+    <Path d="M89.3333 60H0" stroke="white" strokeWidth={3} />
+    <Path d="M88.6667 78.6668L22 78.6667" stroke="white" strokeWidth={3} />
+    <Path d="M88.667 97.3332L44.667 97.3333" stroke="white" strokeWidth={3} />
+  </Svg>
+);
+export const SmartReminderIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 210 194" fill="none">
+    <Path
+      d="M50.6858 167.143C37.3836 157.889 39.3596 143.045 42.0104 136.779L86.1098 167.143C79.8443 170.999 63.9879 176.397 50.6858 167.143Z"
+      fill="white"
+    />
+    <Path
+      d="M122.98 191L6.58594 109.307C8.51379 102.801 15.4059 90.2216 27.5513 91.9566C39.6968 93.6917 48.0348 81.1124 50.6856 74.6059C76.1332 36.4344 111.895 37.9766 126.595 43.5192C134.547 37.7356 141.777 42.0733 144.668 46.4109C146.982 49.8811 145.632 56.0502 144.668 58.701C168.526 81.1123 154.79 113.645 147.56 127.381C140.331 141.117 127.318 149.069 134.547 167.866C140.331 182.903 129.246 189.554 122.98 191Z"
+      stroke="white"
+      strokeWidth={4.33767}
+    />
+    <Circle
+      cx={31.2845}
+      cy={31.2845}
+      r={29.6379}
+      stroke="white"
+      strokeWidth={3.2931}
+    />
+    <Path d="M31.5469 12.6594V34.4225" stroke="white" strokeWidth={3.2931} />
+    <Rect
+      x={28.8262}
+      y={39.1831}
+      width={5.44078}
+      height={5.44078}
+      fill="white"
+    />
+    <Path
+      d="M170.908 63.2298L190.609 49.5393"
+      stroke="white"
+      strokeWidth={3.75949}
+    />
+    <Path
+      d="M198.719 97.7147L176.111 92.0002"
+      stroke="white"
+      strokeWidth={3.75948}
+    />
+    <Path
+      d="M175.377 77.2806L199.572 73.8294"
+      stroke="white"
+      strokeWidth={3.75949}
+    />
+  </Svg>
+);
+export const SeamlessCalendarIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 207 198" fill="none">
+    <Rect
+      x={1.5}
+      y={1.5}
+      width={185.966}
+      height={185.966}
+      rx={45.979}
+      stroke="white"
+      strokeWidth={3}
+    />
+    <Path d="M0.237305 61.0105H188.254" stroke="white" strokeWidth={3} />
+    <Circle cx={60.2987} cy={29.4369} r={9.97059} fill="white" />
+    <Circle
+      cx={42.4938}
+      cy={123.208}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={77.1529}
+      cy={91.8719}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={42.4938}
+      cy={156.918}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle cx={77.1529} cy={123.208} r={9.2584} fill="white" />
+    <Circle
+      cx={111.813}
+      cy={91.8719}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={77.1529}
+      cy={156.918}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={111.813}
+      cy={123.208}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={145.998}
+      cy={91.8719}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle
+      cx={111.338}
+      cy={156.918}
+      r={8.54622}
+      stroke="white"
+      strokeWidth={1.42437}
+    />
+    <Circle cx={114.899} cy={29.4369} r={9.97059} fill="white" />
+    <Rect x={143} y={134} width={64} height={64} rx={32} fill="white" />
+    <Path
+      d="M161.984 150.381V160.794H172.397"
+      stroke="#142F5A"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M161.984 160.793L165.98 156.615C167.475 155.179 169.29 154.121 171.276 153.528C173.262 152.935 175.361 152.825 177.398 153.207C179.435 153.589 181.352 154.452 182.988 155.724C184.624 156.996 185.933 158.64 186.806 160.52"
+      stroke="#142F5A"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M188.016 181.619V171.206H177.604"
+      stroke="#142F5A"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M188.016 171.206L184.02 175.384C182.525 176.821 180.71 177.879 178.724 178.472C176.738 179.065 174.639 179.175 172.602 178.793C170.565 178.411 168.648 177.548 167.012 176.276C165.376 175.004 164.067 173.36 163.194 171.48"
+      stroke="#142F5A"
+      strokeWidth={3}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
