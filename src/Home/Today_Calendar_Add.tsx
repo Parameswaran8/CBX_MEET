@@ -1,25 +1,58 @@
 import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { PlusIcon } from "../../Icons/Icons";
+import { useData } from "../Context/context";
 
 const TodayCalendarAdd = () => {
+  const {
+    openBottomSheet,
+    today_list,
+    setToday_list,
+    calendarMark,
+    setCalendarMark,
+  } = useData();
+  // console.log("8", today_list);
+
+  function openTodayList() {
+    openBottomSheet();
+    setToday_list(true);
+  }
+
+  function openCalendarView() {
+    openBottomSheet();
+    setCalendarMark(true);
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.leftButtonsRow}>
-        <View style={styles.buttonWrapper}>
-          <TouchableOpacity
-            style={styles.textButton}
-            onPress={() => Alert.alert("Pressed!")}
-          >
-            <Text style={styles.buttonText}>{"Today (2)"}</Text>
+        <View
+          style={[
+            styles.buttonWrapper,
+            today_list && { backgroundColor: "black" },
+          ]}
+        >
+          <TouchableOpacity style={styles.textButton} onPress={openTodayList}>
+            <Text style={[styles.buttonText, today_list && { color: "white" }]}>
+              {"Today (2)"}
+            </Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.buttonWrapper}>
+        <View
+          style={[
+            styles.buttonWrapper,
+            calendarMark && { backgroundColor: "black" },
+          ]}
+        >
           <TouchableOpacity
             style={styles.textButton}
-            onPress={() => Alert.alert("Pressed!")}
+            onPress={openCalendarView}
           >
-            <Text style={styles.buttonText}>{"Calendar"}</Text>
+            <Text
+              style={[styles.buttonText, calendarMark && { color: "white" }]}
+            >
+              {"Calendar"}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -68,7 +101,6 @@ const styles = StyleSheet.create({
   textButton: {
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#FFFFFF",
     borderRadius: 25,
     padding: 6,
     paddingHorizontal: 15,
