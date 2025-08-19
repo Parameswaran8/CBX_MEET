@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^5.1.8",
     "@react-native/new-app-screen": "0.80.2",
     "@react-navigation/bottom-tabs": "^7.4.4",
     "@react-navigation/drawer": "^7.5.6",
@@ -18,7 +19,7 @@
     "npm": "^11.5.2",
     "react": "19.1.0",
     "react-native": "0.80.2",
-    "react-native-gesture-handler": "^2.27.2",
+    "react-native-gesture-handler": "^2.28.0",
     "react-native-mmkv": "^3.3.0",
     "react-native-reanimated": "^4.0.1",
     "react-native-safe-area-context": "^5.5.2",

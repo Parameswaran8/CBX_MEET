@@ -7,6 +7,7 @@ import Svg, {
   Defs,
   ClipPath,
   Mask,
+  Ellipse,
 } from "react-native-svg";
 
 interface IconProps {
@@ -1396,4 +1397,111 @@ export const SeamlessCalendarIcon: React.FC<IconProps> = ({ size, color }) => (
     />
   </Svg>
 );
+export const DownDrawerIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 10 5" fill="none">
+    <Path
+      d="M1 1L5 4L9 1"
+      stroke="#040C1A"
+      strokeWidth={1.5}
+      strokeLinecap="round"
+    />
+    <Path
+      d="M1 1L5 4L9 1"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.5}
+      strokeLinecap="round"
+    />
+    <Path
+      d="M1 1L5 4L9 1"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={1.5}
+      strokeLinecap="round"
+    />
+  </Svg>
+);
+export const LocationIcon2: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 17 23" fill="none">
+    <Path
+      d="M14.1677 7.73621C14.1677 11.2731 10.2441 14.9565 8.92659 16.0942C8.80385 16.1864 8.65443 16.2364 8.50086 16.2364C8.34729 16.2364 8.19788 16.1864 8.07514 16.0942C6.75759 14.9565 2.83398 11.2731 2.83398 7.73621C2.83398 6.23327 3.43103 4.79187 4.49378 3.72913C5.55652 2.66638 6.99791 2.06934 8.50086 2.06934C10.0038 2.06934 11.4452 2.66638 12.508 3.72913C13.5707 4.79187 14.1677 6.23327 14.1677 7.73621Z"
+      stroke="#040C1A"
+      strokeWidth={0.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M14.1677 7.73621C14.1677 11.2731 10.2441 14.9565 8.92659 16.0942C8.80385 16.1864 8.65443 16.2364 8.50086 16.2364C8.34729 16.2364 8.19788 16.1864 8.07514 16.0942C6.75759 14.9565 2.83398 11.2731 2.83398 7.73621C2.83398 6.23327 3.43103 4.79187 4.49378 3.72913C5.55652 2.66638 6.99791 2.06934 8.50086 2.06934C10.0038 2.06934 11.4452 2.66638 12.508 3.72913C13.5707 4.79187 14.1677 6.23327 14.1677 7.73621Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M14.1677 7.73621C14.1677 11.2731 10.2441 14.9565 8.92659 16.0942C8.80385 16.1864 8.65443 16.2364 8.50086 16.2364C8.34729 16.2364 8.19788 16.1864 8.07514 16.0942C6.75759 14.9565 2.83398 11.2731 2.83398 7.73621C2.83398 6.23327 3.43103 4.79187 4.49378 3.72913C5.55652 2.66638 6.99791 2.06934 8.50086 2.06934C10.0038 2.06934 11.4452 2.66638 12.508 3.72913C13.5707 4.79187 14.1677 6.23327 14.1677 7.73621Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeWidth={0.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8.50008 9.86149C9.67373 9.86149 10.6252 8.91006 10.6252 7.73641C10.6252 6.56276 9.67373 5.61133 8.50008 5.61133C7.32643 5.61133 6.375 6.56276 6.375 7.73641C6.375 8.91006 7.32643 9.86149 8.50008 9.86149Z"
+      stroke="#040C1A"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8.50008 9.86149C9.67373 9.86149 10.6252 8.91006 10.6252 7.73641C10.6252 6.56276 9.67373 5.61133 8.50008 5.61133C7.32643 5.61133 6.375 6.56276 6.375 7.73641C6.375 8.91006 7.32643 9.86149 8.50008 9.86149Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Path
+      d="M8.50008 9.86149C9.67373 9.86149 10.6252 8.91006 10.6252 7.73641C10.6252 6.56276 9.67373 5.61133 8.50008 5.61133C7.32643 5.61133 6.375 6.56276 6.375 7.73641C6.375 8.91006 7.32643 9.86149 8.50008 9.86149Z"
+      stroke="black"
+      strokeOpacity={0.2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Ellipse cx={8.5} cy={20.6533} rx={5.5} ry={1} fill="#D9D9D9" />
+  </Svg>
+);
+export const LeftIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 16 16">
+    <Path
+      fill={color}
+      fillRule="evenodd"
+      d="m5.293 8l3.854 3.854l.707-.707L6.707 8l3.147-3.146l-.707-.708z"
+      clipRule="evenodd"
+    />
+  </Svg>
+);
+
+export const RightIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 16 16">
+    <Path
+      fill={color}
+      fillRule="evenodd"
+      d="m10.207 8l-3.854 3.854l-.707-.707L8.793 8L5.646 4.854l.707-.708z"
+      clipRule="evenodd"
+    />
+  </Svg>
+);
+
+export const OopsIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 21 17" fill="none">
+    <Circle cx={3.5} cy={2.71875} r={2} fill="#151515" />
+    <Circle cx={18.5} cy={2.71875} r={2} fill="#151515" />
+    <Path
+      d="M1.5 15.2814C9.85343 11.5151 13.6888 12.2327 20 15.2814"
+      stroke="#21C0F9"
+      strokeWidth={2}
+      strokeLinecap="round"
+    />
+  </Svg>
+);
+
 export const ZoomIcon: React.FC<IconProps> = ({ size, color }) => <></>;

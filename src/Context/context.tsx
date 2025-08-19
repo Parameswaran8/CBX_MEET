@@ -1,4 +1,16 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from "react";
+import {
+  BottomSheetModal,
+  BottomSheetView,
+  BottomSheetModalProvider,
+} from "@gorhom/bottom-sheet";
 
 export const AppContext = createContext<any>(null);
 
@@ -35,38 +47,26 @@ export const AppContextProvider = ({
   const [toolList, setToolList] = useState<ToolList[]>([]);
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
   const [showLogoutModal, setShowLogoutModal] = useState<boolean>(false);
+  const [today_list, setToday_list] = useState<boolean>(false);
+  const [calendarMark, setCalendarMark] = useState<boolean>(false);
 
-  // const [token, setToken] = useState(() => {
-  //   // Try to get token from cookies on initial load
-  //   return storage.getString("userToken") || null;
-  // });
-  // const [headers, setHeaders] = useState({
-  //   "Content-Type": "application/json",
-  //   authorization: token ? `Bearer ${token}` : "",
-  // });
+  const bottomSheetModalRef = useRef<BottomSheetModal>(null);
 
-  // Update headers when token changes
-  // useEffect(() => {
-  //   setHeaders({
-  //     "Content-Type": "application/json",
-  //     authorization: token ? `Bearer ${token}` : "",
-  //   });
-  // }, [token]);
+  const openBottomSheet = useCallback(() => {
+    bottomSheetModalRef.current?.present();
+  }, []);
 
-  // Persist token to cookies
-  // useEffect(() => {
-  //   if (token) {
-  //     storage.set("userToken", token);
-  //   } else {
-  //     storage.delete("userToken");
-  //   }
-  // }, [token]);
+  const closeBottomSheet = useCallback(() => {
+    setToday_list(false);
+    setCalendarMark(false);
+    bottomSheetModalRef.current?.dismiss();
+    // console.log(60, today_list);
+  }, []);
 
-  // const login = () => setIsAuthenticated(true);
-  // const logout = async () => {
-  //   // storage.delete("userToken");
-  //   setIsAuthenticated(false);
-  // };
+  const handleSheetChanges = useCallback((index: number) => {
+    index === -1 && (setToday_list(false), setCalendarMark(false));
+    // console.log(65, index);
+  }, []);
 
   const value = {
     user,
@@ -75,46 +75,91 @@ export const AppContextProvider = ({
     setToggleSidebar,
     showLogoutModal,
     setShowLogoutModal,
+    bottomSheetModalRef,
+    openBottomSheet,
+    closeBottomSheet,
+    handleSheetChanges,
+    today_list,
+    setToday_list,
+    calendarMark,
+    setCalendarMark,
   };
-
-  // useEffect(() => {
-  //   checkAuthStatus();
-  // }, []);
-
-  // const checkAuthStatus = async () => {
-  //   const token = storage.getString("userToken");
-  //   setIsLoading(true);
-  //   console.log("Token found", token, "user", user);
-  //   if (token && !user) {
-  //     try {
-  //       console.log("Fetching user data with token:", token);
-  //       api
-  //         .get("/users/getUser", {
-  //           headers,
-  //         })
-  //         .then((response) => {
-  //           console.log("User data fetched successfully:", response.data);
-  //           setUser(response.data);
-  //           login();
-  //         })
-  //         .catch((error) => {
-  //           console.log(error);
-  //         });
-  //     } catch (error) {
-  //       console.error("Error fetching user data:", error);
-  //     }
-  //   }
-
-  //   try {
-  //     setIsAuthenticated(false);
-  //   } catch (error) {
-  //     console.error("Error checking auth status:", error);
-  //     setIsAuthenticated(false);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
-
-  // if (isLoading) return null;
-  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+  //  here 2
+  return (
+    <BottomSheetModalProvider>
+      <AppContext.Provider value={value}>{children}</AppContext.Provider>
+    </BottomSheetModalProvider>
+  );
 };
+
+// const [token, setToken] = useState(() => {
+//   // Try to get token from cookies on initial load
+//   return storage.getString("userToken") || null;
+// });
+// const [headers, setHeaders] = useState({
+//   "Content-Type": "application/json",
+//   authorization: token ? `Bearer ${token}` : "",
+// });
+
+// Update headers when token changes
+// useEffect(() => {
+//   setHeaders({
+//     "Content-Type": "application/json",
+//     authorization: token ? `Bearer ${token}` : "",
+//   });
+// }, [token]);
+
+// Persist token to cookies
+// useEffect(() => {
+//   if (token) {
+//     storage.set("userToken", token);
+//   } else {
+//     storage.delete("userToken");
+//   }
+// }, [token]);
+
+// const login = () => setIsAuthenticated(true);
+// const logout = async () => {
+//   // storage.delete("userToken");
+//   setIsAuthenticated(false);
+// };
+
+// useEffect(() => {
+//   checkAuthStatus();
+// }, []);
+
+// const checkAuthStatus = async () => {
+//   const token = storage.getString("userToken");
+//   setIsLoading(true);
+//   console.log("Token found", token, "user", user);
+//   if (token && !user) {
+//     try {
+//       console.log("Fetching user data with token:", token);
+//       api
+//         .get("/users/getUser", {
+//           headers,
+//         })
+//         .then((response) => {
+//           console.log("User data fetched successfully:", response.data);
+//           setUser(response.data);
+//           login();
+//         })
+//         .catch((error) => {
+//           console.log(error);
+//         });
+//     } catch (error) {
+//       console.error("Error fetching user data:", error);
+//     }
+//   }
+
+//   try {
+//     setIsAuthenticated(false);
+//   } catch (error) {
+//     console.error("Error checking auth status:", error);
+//     setIsAuthenticated(false);
+//   } finally {
+//     setIsLoading(false);
+//   }
+// };
+
+// if (isLoading) return null;
