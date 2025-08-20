@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, RootTagContext } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   DashboardIcon,
@@ -8,16 +8,9 @@ import {
   SettingsIcon,
 } from "../Icons/Icons";
 import HomeScreen from "../src/Home/HomeScreen";
+import RootStackNavigation from "./RootStackNavigation";
 
 const Tab = createBottomTabNavigator();
-
-// function HomeScreen() {
-//   return (
-//     <View style={styles.center}>
-//       <Text style={styles.text}>Home Screen</Text>
-//     </View>
-//   );
-// }
 
 function EventsScreen() {
   return (
@@ -76,7 +69,7 @@ export default function MainNavigation() {
     >
       <Tab.Screen
         name="HOME"
-        component={HomeScreen} //HomeScreen
+        component={RootStackNavigation} //HomeScreen
         options={{
           tabBarIcon: ({ color, size }) => (
             <HomeIcon size={size} color={color} />

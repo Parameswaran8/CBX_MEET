@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { BurgerIcon, CBXMEETLOGO, SearchIcon } from "../../Icons/Icons";
+import { useNavigation } from "@react-navigation/native";
 
 import { Dispatch, SetStateAction } from "react";
 import { useData } from "../Context/context";
@@ -11,6 +12,7 @@ interface PropsForTopBar {
 
 const TopBar: React.FC<PropsForTopBar> = ({ active }) => {
   const { setToggleSidebar } = useData();
+  const navigation = useNavigation();
   return (
     <View style={styles.Container}>
       <View style={styles.row}>
@@ -23,7 +25,7 @@ const TopBar: React.FC<PropsForTopBar> = ({ active }) => {
         </View>
 
         <View style={styles.top_operations}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("SearchEvent")}>
             <SearchIcon size={26} color={""} />
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setToggleSidebar(true)}>

@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import {
-  SafeAreaView,
-  View,
-  Text,
-  Image,
-  TextInput,
-  StyleSheet,
-} from "react-native";
+import { View, Text, Image, TextInput, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { CustomIcon, LeftIcon, SearchIcon } from "../../Icons/Icons";
 
 export default function SearchScreen() {
   const [clientName, setClientName] = useState("");
@@ -16,23 +11,15 @@ export default function SearchScreen() {
       <View style={styles.contentContainer}>
         {/* Header */}
         <View style={styles.headerContainer}>
-          <Image
-            source={{
-              uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/nmw9ce9d_expires_30_days.png",
-            }}
-            style={styles.headerIcon}
-          />
+          <LeftIcon size={26} color="#040C1A" />
           <Text style={styles.headerText}>Search</Text>
         </View>
 
         {/* Search Box */}
         <View style={styles.searchContainer}>
-          <Image
-            source={{
-              uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/4dj5qqu1_expires_30_days.png",
-            }}
-            style={styles.searchIcon}
-          />
+          <View style={styles.searchIcon}>
+            <SearchIcon size={18} color="#040C1A" />
+          </View>
           <TextInput
             placeholder="Client Name"
             value={clientName}
@@ -43,13 +30,8 @@ export default function SearchScreen() {
 
         {/* Hint Section */}
         <View style={styles.hintContainer}>
-          <View style={styles.hintImageContainer}>
-            <Image
-              source={{
-                uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/m8ihfhk7_expires_30_days.png",
-              }}
-              style={styles.hintImage}
-            />
+          <View style={styles.hintImage}>
+            <CustomIcon size={47} color="#040C1A" />
           </View>
           <View style={styles.hintTextContainer}>
             <Text style={styles.hintText}>
@@ -71,6 +53,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F8F8FA",
     borderRadius: 30,
+    paddingVertical: 13,
+    paddingHorizontal: 10,
   },
   topImage: {
     borderRadius: 30,
@@ -92,7 +76,7 @@ const styles = StyleSheet.create({
   headerText: {
     color: "#040C1A",
     fontSize: 20,
-    fontWeight: "600",
+    fontWeight: "400",
   },
   searchContainer: {
     flexDirection: "row",
@@ -101,42 +85,38 @@ const styles = StyleSheet.create({
     borderRadius: 999,
     paddingVertical: 12,
     paddingHorizontal: 14,
-    marginBottom: 12,
     marginHorizontal: 23,
   },
+
   searchIcon: {
-    width: 18,
-    height: 18,
-    marginRight: 7,
+    paddingLeft: 10,
+    paddingRight: 5,
   },
+
   searchInput: {
     color: "#040C1A",
-    fontSize: 14,
+    fontSize: 15,
     flex: 1,
   },
   hintContainer: {
-    marginTop: "auto",
     marginHorizontal: 23,
     marginBottom: 30,
   },
-  hintImageContainer: {
+  hintImage: {
+    height: 19,
+    marginRight: 29,
     alignItems: "flex-end",
     marginBottom: 8,
-  },
-  hintImage: {
-    width: 47,
-    height: 9,
-    marginRight: 29,
   },
   hintTextContainer: {
     backgroundColor: "#040C1A",
     borderRadius: 999,
     paddingVertical: 13,
-    paddingHorizontal: 20,
+    paddingHorizontal: 30,
   },
   hintText: {
     color: "#FFFFFF",
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
   },
 });

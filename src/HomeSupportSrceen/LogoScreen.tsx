@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  SafeAreaView,
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-} from "react-native";
+import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { CBXMEETLOGO, LeftIcon, PointerIcon } from "../../Icons/Icons";
 
 const LogoScreen = () => {
   return (
@@ -15,25 +10,13 @@ const LogoScreen = () => {
         <View style={styles.mainContainer}>
           {/* Header Row */}
           <View style={styles.headerRow}>
-            <Image
-              source={{
-                uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/irzrvgy6_expires_30_days.png",
-              }}
-              resizeMode="contain"
-              style={styles.headerIcon}
-            />
+            <LeftIcon size={26} color="#040C1A" />
             <Text style={styles.headerText}>CBXMEET</Text>
           </View>
 
           {/* Center Illustration */}
           <View style={styles.centerImageContainer}>
-            <Image
-              source={{
-                uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/chmgc20w_expires_30_days.png",
-              }}
-              resizeMode="contain"
-              style={styles.centerImage}
-            />
+            <CBXMEETLOGO color={""} height={152} width={169} />
           </View>
 
           {/* Title & Subtitle */}
@@ -49,65 +32,55 @@ const LogoScreen = () => {
           <View style={styles.featuresContainer}>
             <View style={styles.featureCard}>
               <View style={styles.featureRow}>
-                <Image
-                  source={{
-                    uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/297pq6an_expires_30_days.png",
-                  }}
-                  resizeMode="contain"
-                  style={styles.featureIcon}
-                />
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#040C1A"} />
+                </View>
+
                 <Text style={styles.activeFeatureText}>
                   Quick Event Creation
                 </Text>
               </View>
 
-              <View style={styles.featureRow}>
-                <Image
-                  source={{
-                    uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/y9vw3bvq_expires_30_days.png",
-                  }}
-                  resizeMode="contain"
-                  style={styles.featureIcon}
-                />
+              <View style={[styles.featureRow, styles.Center]}>
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#21C0F9"} />
+                </View>
                 <Text style={styles.inactiveFeatureText}>Calendar Syncing</Text>
               </View>
 
               <View style={styles.featureRow}>
-                <Image
-                  source={{
-                    uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/rc38vo1e_expires_30_days.png",
-                  }}
-                  resizeMode="contain"
-                  style={styles.featureIcon}
-                />
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#040C1A"} />
+                </View>
                 <Text style={styles.activeFeatureText}>
                   Smart Notifications & Reminders
                 </Text>
               </View>
 
-              <View style={styles.featureRow}>
-                <Image
-                  source={{
-                    uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/ytnessce_expires_30_days.png",
-                  }}
-                  resizeMode="contain"
-                  style={styles.featureIcon}
-                />
+              <View style={[styles.featureRow, styles.Center]}>
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#21C0F9"} />
+                </View>
                 <Text style={styles.inactiveFeatureText}>
                   Participant Management
                 </Text>
               </View>
 
               <View style={styles.featureRow}>
-                <Image
-                  source={{
-                    uri: "https://storage.googleapis.com/tagjs-prod.appspot.com/v1/y9MjvDGvUx/n28zv5wq_expires_30_days.png",
-                  }}
-                  resizeMode="contain"
-                  style={styles.featureIcon}
-                />
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#040C1A"} />
+                </View>
                 <Text style={styles.activeFeatureText}>
                   User Friendly Dashboard
+                </Text>
+              </View>
+
+              <View style={[styles.featureRow, styles.Center]}>
+                <View style={styles.featureIcon}>
+                  <PointerIcon size={18} color={"#21C0F9"} />
+                </View>
+                <Text style={styles.inactiveFeatureText}>
+                  Direct Link Share
                 </Text>
               </View>
             </View>
@@ -125,6 +98,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#F8F8FA",
     borderRadius: 30,
     paddingBottom: 20,
+    paddingVertical: 13,
+    paddingHorizontal: 10,
   },
   topImage: {
     borderTopLeftRadius: 30,
@@ -139,7 +114,7 @@ const styles = StyleSheet.create({
     marginLeft: 14,
   },
   headerIcon: { width: 24, height: 24, marginRight: 14 },
-  headerText: { color: "#040C1A", fontSize: 20, fontWeight: "600" },
+  headerText: { color: "#040C1A", fontSize: 20, fontWeight: "400" },
   centerImageContainer: { alignItems: "center", marginBottom: 26 },
   centerImage: { width: 169, height: 152 },
   titleContainer: {
@@ -151,20 +126,42 @@ const styles = StyleSheet.create({
     color: "#040C1A",
     fontSize: 20,
     marginBottom: 11,
-    fontWeight: "600",
+    fontWeight: "400",
   },
-  subtitleText: { color: "#7A7B93", fontSize: 14, textAlign: "center" },
-  featuresContainer: { marginBottom: 40, marginHorizontal: 20 },
-  featureCard: {
+  subtitleText: {
+    paddingVertical: 5,
+    color: "#7A7B93",
+    fontSize: 14,
+    textAlign: "center",
+    width: "60%",
+  },
+  featuresContainer: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 30,
-    paddingVertical: 30,
-    paddingHorizontal: 20,
+    marginBottom: 40,
+    marginHorizontal: 20,
+    justifyContent: "center",
+    borderRadius: 20,
+
+    // iOS Shadow
+    shadowColor: "#8996AB",
+    shadowOffset: { width: 0, height: 6 }, // push shadow downward
+    shadowOpacity: 0.15, // lighter shadow
+    shadowRadius: 6, // control blur
+
+    // Android Shadow (elevation controls direction too)
+    elevation: 8, // keep lower so it's not all sides
+    marginTop: 30,
   },
-  featureRow: { flexDirection: "row", alignItems: "center", marginBottom: 19 },
+  featureCard: {
+    gap: 22,
+    borderRadius: 30,
+    paddingVertical: 35,
+    paddingHorizontal: 60,
+  },
+  featureRow: { flexDirection: "row" },
   featureIcon: { width: 18, height: 18, marginRight: 12 },
-  activeFeatureText: { color: "#040C1A", fontSize: 13, fontWeight: "bold" },
-  inactiveFeatureText: { color: "#8995AB", fontSize: 13, fontWeight: "bold" },
+  activeFeatureText: { color: "#040C1A", fontSize: 13, fontWeight: "500" },
+  inactiveFeatureText: { color: "#8995AB", fontSize: 13, fontWeight: "500" },
   linearGradient: {
     position: "absolute",
     bottom: 0,
@@ -173,6 +170,10 @@ const styles = StyleSheet.create({
     height: 80,
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
+  },
+
+  Center: {
+    paddingLeft: 40,
   },
 });
 

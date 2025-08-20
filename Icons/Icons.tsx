@@ -373,6 +373,12 @@ export const PlusIcon: React.FC<IconProps> = ({ size, color }) => (
   </Svg>
 );
 
+export const MinusIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 9 2" fill="none">
+    <Path d="M8.38 0.5V1.68H0.6V0.5H8.38Z" fill="black" />
+  </Svg>
+);
+
 export const ShareIcon: React.FC<IconProps> = ({ size, color }) => (
   <Svg width={size} height={size} viewBox="0 0 19 19" fill="none">
     <Path
@@ -1504,4 +1510,59 @@ export const OopsIcon: React.FC<IconProps> = ({ size, color }) => (
   </Svg>
 );
 
+export const CustomIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 48 10" fill="none">
+    <Path
+      d="M1.10771 9.04804C0.614701 9.09751 0.242607 9.08847 0 9.04804H1.10771C2.64685 8.89357 5.36451 8.16874 9 6.04804C15 2.54804 17.5 0.548036 22 0.048036C26.5 -0.451964 32 3.04804 36 6.04804C39.2 8.44804 45 9.04804 47.5 9.04804H1.10771Z"
+      fill="#040C1A"
+    />
+  </Svg>
+);
+
+export const PointerIcon: React.FC<IconProps> = ({ size, color }) => (
+  <Svg width={size} height={size} viewBox="0 0 16 16" fill="none">
+    <G clipPath="url(#clip0_99_3094)">
+      <Path
+        d="M6.66699 14.6663C5.2525 14.6663 3.89595 14.1044 2.89576 13.1042C1.89556 12.1041 1.33366 10.7475 1.33366 9.33301"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M8.66699 11.9997L9.33366 11.9997C9.68728 11.9997 10.0264 11.8592 10.2765 11.6092C10.5265 11.3591 10.667 11.02 10.667 10.6663C10.667 10.3127 10.5265 9.97358 10.2765 9.72353C10.0264 9.47348 9.68728 9.33301 9.33366 9.33301"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M9.33301 9.33366L9.99967 9.33366C10.3533 9.33366 10.6924 9.19318 10.9425 8.94313C11.1925 8.69309 11.333 8.35395 11.333 8.00033C11.333 7.6467 11.1925 7.30757 10.9425 7.05752C10.6924 6.80747 10.3533 6.66699 9.99967 6.66699L9.33301 6.66699"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M9.66699 6.66667L13.3337 6.66667C13.6873 6.66667 14.0264 6.52619 14.2765 6.27614C14.5265 6.02609 14.667 5.68696 14.667 5.33333C14.667 4.97971 14.5265 4.64057 14.2765 4.39052C14.0264 4.14048 13.6873 4 13.3337 4L6.66699 4"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <Path
+        d="M8.66667 11.9997C9.02029 11.9997 9.35943 12.1402 9.60947 12.3903C9.85952 12.6403 10 12.9795 10 13.3331C10 13.6867 9.85952 14.0258 9.60947 14.2759C9.35943 14.5259 9.02029 14.6664 8.66667 14.6664L6.66667 14.6664C5.25218 14.6664 3.89562 14.1045 2.89543 13.1043C1.89523 12.1041 1.33333 10.7476 1.33333 9.33308L1.33333 7.99974C1.33333 6.13308 1.90667 4.99974 2.89333 4.00641L5.29333 1.60641C5.54737 1.37703 5.87989 1.25413 6.22204 1.26316C6.56419 1.27218 6.88977 1.41244 7.13136 1.65489C7.37295 1.89734 7.51206 2.22341 7.51987 2.56559C7.52768 2.90777 7.40361 3.23985 7.17333 3.49308L6 4.66641"
+        stroke={color}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="clip0_99_3094">
+        <Rect
+          width={size}
+          height={size}
+          fill="white"
+          transform="translate(16) rotate(90)"
+        />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
 export const ZoomIcon: React.FC<IconProps> = ({ size, color }) => <></>;
